@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slideFadeIn {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* index.css or global.css */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #92b8d1;
+  display: none;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #c1c3c4; /* Tailwind's blue-500 */
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a4a3a3; /* Tailwind's blue-600 */
+}
+
+
+@media(max-width:550px){
+  /* index.css or global.css */
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+}
