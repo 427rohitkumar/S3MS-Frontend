@@ -4,6 +4,7 @@ import { Card } from '../components/ui/Card'
 import { filePath, Image } from '../components/ui/Image'
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 import { expensesData, revenueData } from '../services/dummyData'
+import { Input, Label, Option, Select } from '../components/ui/Form'
 
 const RevenueReport = () => {
   return (
@@ -18,6 +19,20 @@ const RevenueReport = () => {
          <Card title={<h1 className='text-green-600'>Profit</h1>} text={<h1 className='text-green-700'>22,000</h1>} src={filePath.profit} className='bg-white min-w-[100px] min-h-[90px] lg:min-w-[160px] lg:h-[110px]'/>
          <Card title={<h1 className='text-red-500'>Pending Collection</h1>} text={<h1 className='text-red-500'>10</h1>} src={filePath.pendingCollection} className='bg-white min-w-[100px] min-h-[90px] lg:min-w-[160px] lg:h-[110px]'/>
          <Card title={<h1 className='text-red-600'>Pending Amount</h1>} text={<h1 className='text-red-600'>10,000</h1>} src={filePath.pendingAmount} className='bg-white min-w-[100px] min-h-[90px] lg:min-w-[160px] lg:h-[110px]'/>
+       </Container>
+
+       <Container className='px-2 mt-4 gap-2'>
+        <Label>Filter</Label>
+         <Select className='w-[100px] !p-1 rounded-[6px]'>
+            <Option>2023</Option>
+            <Option>2024</Option>
+            <Option>2025</Option>
+         </Select>
+         <Select className='w-[100px] !p-1 rounded-[6px]'>
+            <Option>January</Option>
+            <Option>February</Option>
+            <Option>March</Option>
+         </Select>
        </Container>
 
       {/* ------- Revenu detail conatiner ------ */}
